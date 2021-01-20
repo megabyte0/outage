@@ -1,0 +1,37 @@
+CREATE TABLE repair (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	repair_id TEXT NOT NULL,
+	atext TEXT NOT NULL,
+	sp_time_ TEXT NOT NULL,
+	sf_time_ TEXT NOT NULL,
+	rp_time_ TEXT NOT NULL,
+	rf_time_ TEXT NOT NULL,
+	sp_time INTEGER NOT NULL,
+	sf_time INTEGER NOT NULL,
+	rp_time INTEGER NOT NULL,
+	rf_time INTEGER,
+	address TEXT NOT NULL,
+	location_ TEXT NOT NULL,
+	locT TEXT NOT NULL,
+	"type" TEXT NOT NULL,
+	"__address__" TEXT NOT NULL
+);
+
+CREATE INDEX repair_repair_id_IDX ON repair (repair_id);
+
+CREATE TABLE repair_place (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	repair_id INTEGER NOT NULL,
+	n INTEGER NOT NULL,
+	place TEXT NOT NULL,
+	CONSTRAINT repair_place_FK FOREIGN KEY (repair_id) REFERENCES repair(id)
+);
+CREATE INDEX repair_place_repair_id_IDX ON repair_place (repair_id);
+
+CREATE TABLE reported (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	chat_id INTEGER NOT NULL,
+	repair_id TEXT NOT NULL
+);
+
+
