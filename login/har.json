@@ -1,0 +1,146 @@
+[
+    {
+        "request": {
+            "url": "https://www.pythonanywhere.com/user/odessaoutage/tasks_tab/",
+            "headers": [
+                {
+                    "name": "Host",
+                    "value": "www.pythonanywhere.com"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (X11; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0"
+                },
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+                },
+                {
+                    "name": "Accept-Language",
+                    "value": "en-GB,en;q=0.5"
+                },
+                {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br"
+                },
+                {
+                    "name": "DNT",
+                    "value": "1"
+                },
+                {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                },
+                {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                }
+            ],
+            "method": "GET"
+        }
+    },
+    {
+        "request": {
+            "url": "https://www.pythonanywhere.com/login/?next=/user/odessaoutage/tasks_tab/",
+            "headers": [
+                {
+                    "name": "Host",
+                    "value": "www.pythonanywhere.com"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (X11; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0"
+                },
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+                },
+                {
+                    "name": "Accept-Language",
+                    "value": "en-GB,en;q=0.5"
+                },
+                {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br"
+                },
+                {
+                    "name": "Referer",
+                    "value": "https://www.pythonanywhere.com/login/?next=/user/odessaoutage/tasks_tab/"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                },
+                {
+                    "name": "Content-Length",
+                    "value": "194"
+                },
+                {
+                    "name": "Origin",
+                    "value": "https://www.pythonanywhere.com"
+                },
+                {
+                    "name": "DNT",
+                    "value": "1"
+                },
+                {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                },
+                {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                }
+            ],
+            "method": "POST"
+        }
+    },
+    {
+        "request": {
+            "url": "https://www.pythonanywhere.com/api/v0/user/odessaoutage/schedule/204108/",
+            "headers": [
+                {
+                    "name": "Host",
+                    "value": "www.pythonanywhere.com"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (X11; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept-Language",
+                    "value": "en-GB,en;q=0.5"
+                },
+                {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br"
+                },
+                {
+                    "name": "Referer",
+                    "value": "https://www.pythonanywhere.com/user/odessaoutage/tasks_tab/"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Length",
+                    "value": "116"
+                },
+                {
+                    "name": "Origin",
+                    "value": "https://www.pythonanywhere.com"
+                },
+                {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                }
+            ],
+            "method": "PATCH"
+        }
+    }
+]
