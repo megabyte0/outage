@@ -3,6 +3,8 @@ import sqlite3
 import json
 from collections import defaultdict
 import time
+import os
+os.chdir('/home/megabyte/outage/')
 url = 'https://infoxvod.com.ua/api/repairs'
 my_places = ['филатова','малиновский']
 ##repair_fields=r'''repair_id
