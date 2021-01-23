@@ -4,7 +4,9 @@ import json
 from collections import defaultdict
 import time
 import os
-os.chdir('/home/megabyte/outage/')
+os.chdir('/home/odessaoutage/outage/')
+import login.re_schedule
+os.chdir('/home/odessaoutage/outage/')
 url = 'https://infoxvod.com.ua/api/repairs'
 my_places = ['филатова','малиновский']
 ##repair_fields=r'''repair_id
@@ -85,10 +87,12 @@ def get_repairs():
     cursor.close()
     conn.close()
 
-for i in range(24):
-    try:
-        get_repairs()
-    except Exception as e:
-        pass
-    if i!=23:
-        time.sleep(60*60)
+##for i in range(24):
+##    try:
+##        get_repairs()
+##    except Exception as e:
+##        pass
+##    if i!=23:
+##        time.sleep(60*60)
+get_repairs()
+

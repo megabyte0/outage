@@ -6,6 +6,8 @@ import urllib.parse
 import urllib.error
 import re
 import time
+import os
+os.chdir('/home/odessaoutage/outage/login/')
 ##har=[]
 ##for i in ['www.pythonanywhere.com_Archive [21-01-20 13-20-39].har',
 ##          'www.pythonanywhere.com_Archive [21-01-20 13-22-18].har',
