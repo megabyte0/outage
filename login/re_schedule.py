@@ -6,19 +6,22 @@ import urllib.parse
 import urllib.error
 import re
 import time
-har=[]
-for i in ['www.pythonanywhere.com_Archive [21-01-20 13-20-39].har',
-          'www.pythonanywhere.com_Archive [21-01-20 13-22-18].har',
-          'www.pythonanywhere.com_Archive [21-01-23 08-04-37].har'
-    ]:
-    with open(i,'rt') as fp:
-        har.append(json.load(fp))
-f=lambda x:(
-    f(x[0]) if isinstance(x,list) else
-    [(k,type(v)) for k,v in x.items()]
-    if isinstance(x,dict)
-    else None
-    )
+##har=[]
+##for i in ['www.pythonanywhere.com_Archive [21-01-20 13-20-39].har',
+##          'www.pythonanywhere.com_Archive [21-01-20 13-22-18].har',
+##          'www.pythonanywhere.com_Archive [21-01-23 08-04-37].har'
+##    ]:
+##    with open(i,'rt') as fp:
+##        har.append(json.load(fp))
+##f=lambda x:(
+##    f(x[0]) if isinstance(x,list) else
+##    [(k,type(v)) for k,v in x.items()]
+##    if isinstance(x,dict)
+##    else None
+##    )
+with open('har.json','rt') as fp:
+    har=json.load(fp)
+har=[{'log':{'entries':[i]}} for i in har]
 copy_headers=lambda x:({
     i['name']:i['value']
     for i in x['request']['headers']
@@ -131,8 +134,12 @@ req[1]['data']=json.dumps({
     "interval":"daily",
     "hour":str(hour),
     "minute":str(minute),
-    "command":"python3.8 /home/megabyte/outage/water_outage_kiss_yagni.py"
+    "command":"python3.8 /home/odessaoutage/outage/water_outage_kiss_yagni.py"
     }).encode()
 
 fr,data=myurlopen(req_from_copied(req))
 assert fr.status==200
+
+#copy_har_part=lambda x,e:{e[0]:x[e[0]]} if len(e)==1 else {e[0]:copy_har_part(x[e[0]],e[1:])}
+#copy_har=lambda x:{'request':{i:x['request'][i] for i in ['url','headers','method']}}
+#har0=[copy_har(har[i]['log']['entries'][0]) for i in range(3)]
